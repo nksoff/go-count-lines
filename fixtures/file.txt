@@ -1,0 +1,4 @@
+this is just a file
+
+
+this is line 4, nevertheless the file has only 3 lines (count '\n' occurrences)
