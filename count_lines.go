@@ -32,7 +32,7 @@ func logError(e error) {
 func getFileName() (string, error) {
 	if len(os.Args) == 1 {
 		return "", errors.New(
-			fmt.Sprintf("No file arg provided\nUsage: %s " +
+			fmt.Sprintf("No file arg provided\nUsage: %s "+
 				"[file]\n", os.Args[0]))
 	}
 
@@ -52,7 +52,7 @@ func countLinesInFile(fileName string) (int, error) {
 	for {
 		readBytes, err := file.Read(buf)
 
-		if (err != nil) {
+		if err != nil {
 			if readBytes == 0 && err == io.EOF {
 				err = nil
 			}
